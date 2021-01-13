@@ -8,8 +8,6 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{app.globalData.userInfo}}</text> 
-    <button bindtap="goIndex">跳转页面</button>
+    <text class="user-motto">{{motto}}</text>
   </view>
-
 </view>

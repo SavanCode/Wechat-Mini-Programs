@@ -1,0 +1,2 @@
+<!--miniprogram/lianxi/duanzi.wxml--> 
+<button bindtap="addData">新增数据</button>

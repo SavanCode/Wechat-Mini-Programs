@@ -1,19 +1,14 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-const global=app.globalData.userInfo
+
 Page({
-  data: { 
+  data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  goIndex(){
-    wx.navigateTo({
-    url:"/pages/page2/newpage"
-    })
-},
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
