@@ -1,0 +1,32 @@
+/**index.wxss**/
+@import '../../weui.wxss';
+.container{
+    display: flex;
+    padding: 0;
+    margin-top:10%; 
+
+}
+.weui-cell{
+    border-bottom: rgb(194, 185, 185) solid 1rpx;
+}
+.weui-flex{
+    width: 100%;
+}
+.regist-option{
+    justify-content: space-between;
+    font-size:small; 
+    text-align: center;  
+}
+.loginbtn{ 
+    font-size: small;
+    font-style: normal;
+}
+.btn-area{
+    margin-top: 80rpx;
+    margin-bottom: 80rpx;
+    width: 100%; 
+}
+ 
+.inputtitle{ 
+    max-width: 20%;  
+}

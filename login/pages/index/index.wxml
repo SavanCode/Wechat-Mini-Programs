@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container weui-flex">
+	<block class="weui-flex__item">
+		<form bindsubmit="formSubmit">
+			<view class="weui-cell">
+				<view class="weui-cell__hd inputtitle">
+					<label class="weui-label">账号</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input
+					 class="weui-input"
+					 type="text"
+					 placeholder="用户/邮箱/手机号"
+					 emptyTips="请输入"
+					 notMatchTips="请输入正确格式"
+					 bindinput="accountInput"
+					/>
+				</view>
+			</view>
+
+			<view class="weui-cell">
+				<view class="weui-cell__hd inputtitle">
+					<label class="weui-label">密码</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input
+					 class="weui-input"
+					 type="password"
+					 placeholder="请输入密码"
+					 emptyTips="请输入"
+					 notMatchTips="请输入正确格式"
+					 bindinput="passwordInput"
+					/>
+				</view>
+			</view>
+
+			<view class="btn-area">
+				<button
+				 formType="submit"
+				 class="loginbtn"
+				 style="width:100%"
+				 disabled="{{disabled}}"
+				 type="{{btnType}}"
+				>登录
+				</button>
+			</view>
+		</form>
+
+	</block>
+
+	<block class="weui-flex__item">
+		<view class="weui-flex">
+			<view class="weui-flex__item regist-option">
+				<view class="placeholder">
+					<navigator url="../mobile/index">手机快速注册</navigator>
+				</view>
+			</view>
+			<view class="weui-flex__item regist-option">
+				<view class="placeholder">
+					<navigator url="../company/index">企业用户注册</navigator>
+				</view>
+			</view>
+			<view class="weui-flex__item regist-option">
+				<view class="placeholder">
+					<!-- <navigator url="../reset/index">找回密码</navigator> -->
+					找回密码
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
+

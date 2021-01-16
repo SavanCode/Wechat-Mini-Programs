@@ -1,14 +1,38 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/page2/newpage"
-    
+    "pages/page2/newpage",
+    "pages/fav/fav",
+    "pages/usercenter/usercenter"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "title",
     "navigationBarTextStyle": "black"
+  }, 
+  "tabBar": {
+    "selectedColor": "#1AAD16",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "头条",
+        "iconPath": "img/news.png",
+        "selectedIconPath": "img/news_s.png"
+      },
+      {
+        "pagePath": "pages/fav/fav",
+        "text": "收藏",
+        "iconPath": "img/star.png",
+        "selectedIconPath": "img/star_s.png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "个人中心",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/user_s.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

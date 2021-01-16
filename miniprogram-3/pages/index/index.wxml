@@ -1,4 +1,5 @@
 <!--index.wxml-->
 <view class="container">
- 
+ <text>登陆成功-首页</text>
+ <text>内容： 基本的登录 网络请求</text>
 </view>

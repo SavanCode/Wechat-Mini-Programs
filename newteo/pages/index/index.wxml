@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<!--
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -13,3 +14,17 @@
   </view>
 
 </view>
+-->
+<block wx:for="{{feeds}}" wx:key="{{item.ArticleId}}">
+    <view class="list" data-para="{{item}}" bindtap="tapItem">
+      <view class="view_preinfo">
+        <text class="list_preinfo">{{item.CreateDateTime}} / {{item.ArticleAuthor}}</text>
+      </view>
+      <text class="list_title">{{item.ArticleTitle}}</text>
+      <view>
+        <block wx:for="{{item.Tags}}" wx:key="{{item.TagName}}">
+          <text class="list_tag" style="border: solid 1px {{item.BackgroundColor}};">{{item.TagName}}</text>
+        </block>
+      </view>
+    </view>
+  </block>

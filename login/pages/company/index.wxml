@@ -1,0 +1,25 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+	<view class="item">
+		<input
+		 type="text"
+		 name="loginName"
+		 placeholder="请设置4-20位用户名"
+		 placeholder-class="holder"
+		 bindblur="handleUsername"
+		/>
+	</view>
+	<view class="item flex">
+		<input
+		 type="text"
+		 name="loginPw"
+		 placeholder="请设置6-20位的密码"
+		 placeholder-class="holder"
+		 bindblur="handlePw"
+		/>
+		<switch name="switch" />
+	</view>
+
+	<button formType="submit" style="width:100%">注册</button>
+
+</form>
+

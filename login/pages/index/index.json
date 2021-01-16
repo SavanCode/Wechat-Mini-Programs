@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "京东注册",
+  "navigationStyle": "default",
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 50,
+  "disableScroll": false,
+  "usingComponents": {}
+}

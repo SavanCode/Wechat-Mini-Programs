@@ -1,0 +1,30 @@
+@import '../../weui.wxss';
+page {
+    background: #F3F3F3;
+  }
+.weui-cell{
+    background-color: white;
+    border: solid 1rpx grey;
+} 
+.inputTitle{
+    width: 90rpx;   
+    margin-right: 20rpx;
+}
+.weui-label{
+    width: 100%;
+    text-align: center; 
+}  
+.radio{  
+    font-size: x-small; 
+} 
+radio {
+    transform:scale(0.5);
+}
+.nextBtn{
+    width: 100%
+}
+.flex-wrp{
+    margin-top:10%;
+    margin-left:5%;
+    margin-right:5%;
+}

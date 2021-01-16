@@ -1,8 +1,8 @@
 // app.js
 App({
-  globalData: {
-    userInfo: "global data string"
-  },
+  data: {  
+    openid: ''
+},
 
   onLaunch() {
     // 展示本地存储能力
@@ -16,7 +16,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
-    // 获取用户信息
+    获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -41,3 +41,5 @@ App({
     userInfo: null
   }
 })
+
+ 

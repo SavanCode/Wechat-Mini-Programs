@@ -29,7 +29,13 @@ Page({
 			success: function(res) {
 				wx.hideToast();
 				if (res.data.LoginStatus == 1) {
-					//进行一些用户状态的存储
+					//进行一些用户状态的存储 跳转到新的页面
+					wx.switchTab({
+						url:'../../pages/index/index',
+						success:function(){
+								console.log("called switchtab.");
+						}
+				});
 				} else {
 					wx.showModal({
             title: '登录失败', 

@@ -1,0 +1,40 @@
+<form bindsubmit="formSubmit">
+	<view class="flex-wrp" style="height: 300px;flex-direction:column;">
+		<view class="flex-item">
+			<view class="weui-cell">
+				<view class="weui-cell__hd inputTitle">
+					<label class="weui-label">+86</label>
+				</view>
+				<view class="weui-cell__bd">
+					<input
+					 class="weui-input"
+					 type="text"
+					 placeholder="请输入手机号"
+					 emptyTips="请输入"
+					 notMatchTips="请输入正确格式"
+					 bindinput="mobileInput"
+					 value="{{tele}}"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="flex-item">
+			<label class="radio" bindtap='checkedTap'>
+				<radio color="red" checked="{{checked}}" />
+				同意京东用户注册协议
+			</label>
+		</view>
+		<view class="flex-item">
+			<button
+			 class="nextBtn"
+			 size="default"
+			 plain="true"
+			 disabled="{{disabled}}"
+			 form-type="submit"
+			 style="width:100%"
+			> 下一步
+			</button>
+		</view>
+	</view>
+</form>
+
