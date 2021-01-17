@@ -1,5 +1,5 @@
 /**index.wxss**/
-.userinfo {
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,4 +18,67 @@
 
 .usermotto {
   margin-top: 200px;
+} */
+.body{ 
+  display: block;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding: 0;
+}
+.flex-column{
+  display: flex; flex-direction: column;
+}
+.flex-row{
+  display: flex; flex-direction: row;
+}
+.newsItem{ 
+ background-color: blanchedalmond;
+ margin-bottom: 30rpx;
+ height: 180rpx;
+ width: 100%;
+}
+.newsLeft{  
+  height:100%;
+  /*  display: flex;
+ width: 180rpx; 
+  align-items: center;*/
+}
+.newsRight{
+  background-color: blue;
+  flex:4 0 auto; 
+  width: 305rpx;
+}
+
+.coverImg{
+   background-color: #eeeeee;
+   width: 180rpx;
+   height: 180rpx;
+}
+.title{
+  flex: 1 0 auto;
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden; 
+  width: 95%;
+
+  max-height: min-content;
+  font-weight:bold;
+  text-overflow: ellipsis;
+  word-break: break-all;/*自动换行*/
+  -moz-box-orient: vertical; /*从上到下自动排列子元素*/
+  -webkit-box-orient: vertical; 
+ 
+}
+.time{
+  flex: 1 0 auto;
+  height: 33%;
+  margin-top: 5rpx;
+  margin-bottom: 0;
+}
+.author{
+  flex: 1 0 auto;
+  margin-bottom: 0;
+  text-align:end;
 }

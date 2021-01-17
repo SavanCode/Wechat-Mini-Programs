@@ -1,25 +1,83 @@
-<form bindsubmit="formSubmit" bindreset="formReset">
-	<view class="item">
-		<input
-		 type="text"
-		 name="loginName"
-		 placeholder="请设置4-20位用户名"
-		 placeholder-class="holder"
-		 bindblur="handleUsername"
-		/>
-	</view>
-	<view class="item flex">
-		<input
-		 type="text"
-		 name="loginPw"
-		 placeholder="请设置6-20位的密码"
-		 placeholder-class="holder"
-		 bindblur="handlePw"
-		/>
-		<switch name="switch" />
-	</view>
+<view class="container">
+	<form bindsubmit="formSubmit">
+		<view class="item">
+			<input
+			 name="loginName"
+			 type="text"
+			 placeholder="请设置4-20位用户名"
+			 placeholder-class="holder"
+			 bindblur="handleUsername"
+			/>
+		</view>
 
-	<button formType="submit" style="width:100%">注册</button>
-
-</form>
+		<view class="flex-row item">
+			<view class="flex-view-item" style="flex:3 0 auto">
+				<input
+				 name="password"
+				 type="text"
+				 placeholder="请设置6-20位的登录密码"
+				 placeholder-class="holder"
+				/>
+			</view>
+			<view
+			 class="flex-view-item"
+			 name="switch"
+			 style="flex:1 0 auto"
+			>
+				<switch name="switch" />
+			</view>
+		</view>
+		<view class="item">
+			<input
+			 name="company"
+			 type="text"
+			 placeholder="请填写工商注册名称"
+			 placeholder-class="holder"
+			/>
+		</view>
+		<view class="item">
+			<input
+			 name="username"
+			 type="text"
+			 placeholder="联系人姓名"
+			 placeholder-class="holder"
+			/>
+		</view>
+		<view class="flex-row mobile">
+			<view class="flex-view-item" style="flex:2 0 auto">
+				<input
+				 name="mobile"
+				 class="mobileInput"
+				 type="text"
+				 placeholder="请输入手机号"
+				 placeholder-class="holder"
+				/>
+			</view>
+			<view class="flex-view-item msgBtnArea" style="flex:1 0 auto">
+				<view class="msgClick">发送短信</view>
+			</view>
+		</view>
+		<view class="item">
+			<input
+			 name="code"
+			 type="text"
+			 placeholder="短信验证码"
+			 placeholder-class="holder"
+			/>
+		</view>
+		<view class="register">
+			<button
+			 formType="submit"
+			 type="{{btnstate}}"
+			 style="width:100%"
+			 disabled="{{disabled}}"
+			>注册
+			</button>
+		</view>
+		<view class="agree ">
+			<text>注册即为同意</text>
+			<text class="code">《京东用户注册协议》</text>
+		</view>
+	</form>
+</view>
 

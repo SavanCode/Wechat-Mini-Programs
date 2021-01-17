@@ -1,6 +1,6 @@
 <form bindsubmit="formSubmit">
-	<view class="flex-wrp" style="height: 300px;flex-direction:column;">
-		<view class="flex-item">
+	<view class="flex-column">
+		<view class="flex-view-item">
 			<view class="weui-cell">
 				<view class="weui-cell__hd inputTitle">
 					<label class="weui-label">+86</label>
@@ -18,13 +18,13 @@
 				</view>
 			</view>
 		</view>
-		<view class="flex-item">
+		<view class="flex-view-item">
 			<label class="radio" bindtap='checkedTap'>
 				<radio color="red" checked="{{checked}}" />
 				同意京东用户注册协议
 			</label>
 		</view>
-		<view class="flex-item">
+		<view class="flex-view-item">
 			<button
 			 class="nextBtn"
 			 size="default"

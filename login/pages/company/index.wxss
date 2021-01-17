@@ -1,0 +1,82 @@
+/* @import '../../weui.wxss'; */
+page {
+    background: #F3F3F3;
+  }
+.container{  
+    padding: 0;
+    margin-top:10%;
+}
+form{
+    width: 90%; 
+    padding-top: 5rpx;
+}
+.item{
+    border: 2rpx solid #ccc;
+    border-radius: 6rpx;
+    background: #fff;
+    margin-bottom: 30rpx;
+    height: 50rpx;
+}
+.flex-row{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+input{
+    background-color: white;
+    height: 50rpx;
+    /* padding-top: 10rpx;
+    padding-bottom: 10rpx; */
+}
+.holder{
+    font-size: 25rpx;
+    padding-left: 10rpx;
+    color: #999; 
+  }
+  
+switch{ 
+    transform: scale(0.6); 
+    width: 20rpx;  
+    height: fit-content;
+    margin-top: 10rpx;  
+} 
+.mobile{   
+    margin-bottom: 30rpx;
+    height: 50rpx;
+}
+
+.mobileInput{
+    border: 2rpx solid #ccc;
+    border-radius: 6rpx;
+    background: #fff; 
+}
+ 
+.msgBtnArea{
+    width: 30%;
+}
+ 
+.msgClick{ 
+    margin-left: 50%;
+    width: 50%;
+    padding-top: 10rpx; 
+    padding-bottom: 10rpx; 
+    border-radius: 6rpx;
+    border:2rpx solid #ccc;
+    background: #efeeec;
+    text-align: center; 
+    color: #999;  
+    font-size: 25rpx;
+}
+
+.agree{
+    font-size: 25rpx;
+}
+.code{
+    color: red; 
+    text-decoration: underline;
+    font-weight: bold;
+}
+.register{
+    margin-top: 30%;
+    margin-bottom: 5%;
+}

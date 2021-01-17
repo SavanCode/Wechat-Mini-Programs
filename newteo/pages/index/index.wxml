@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<!--
+<!-- 
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -14,17 +14,46 @@
   </view>
 
 </view>
--->
-<block wx:for="{{feeds}}" wx:key="{{item.ArticleId}}">
-    <view class="list" data-para="{{item}}" bindtap="tapItem">
-      <view class="view_preinfo">
-        <text class="list_preinfo">{{item.CreateDateTime}} / {{item.ArticleAuthor}}</text>
-      </view>
-      <text class="list_title">{{item.ArticleTitle}}</text>
-      <view>
-        <block wx:for="{{item.Tags}}" wx:key="{{item.TagName}}">
-          <text class="list_tag" style="border: solid 1px {{item.BackgroundColor}};">{{item.TagName}}</text>
-        </block>
-      </view>
-    </view>
-  </block>
+ -->
+
+<!-- <view wx:for="{{list}}" wx:key="index">
+	<view class="item">
+		<view class="number-wrapper">
+			<text class="name">{{item.author_name}}</text>
+			<view class="count-wrapper">
+				<text class="count">{{item.title}}</text>
+			</view>
+		</view>
+	</view>
+</view> -->
+
+<view
+ class="body"
+ hover-class="none"
+ hover-stop-propagation="false"
+>
+	<view>
+
+		<!-- newitem传进去 -->
+		<view
+		 class="flex-column newsList"
+		 wx:for="{{list}}"
+		 wx:key="index"
+		>
+			<view class="flex-row newsItem">
+				<view class="newsLeft">
+					<!--   mode="widthFix" -->
+					<image class="coverImg" src="{{item.cover}}"></image>
+				</view>
+				<view class="flex-column newsRight">
+					<view class="title">
+						{{item.title}}
+					</view>
+					<view class="time"> 发布于 {{item.published_at}}</view>
+					<view class="author">作者 {{item.author_name}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+

@@ -23,7 +23,9 @@ radio {
 .nextBtn{
     width: 100%
 }
-.flex-wrp{
+.flex-column{
+    height: 300px;
+    flex-direction:column;
     margin-top:10%;
     margin-left:5%;
     margin-right:5%;
