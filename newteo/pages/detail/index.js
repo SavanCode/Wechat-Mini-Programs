@@ -4,7 +4,6 @@ const pageOptions = {
     myrich:'',
     content:'',//current news content 
     collected:false,
-
   }, 
   onLoad(e) { 
     wx.setNavigationBarTitle({
@@ -46,6 +45,29 @@ const pageOptions = {
         wx.hideLoading();
       }
     })
+  },
+  liked:function(){
+    var that=this;
+    let storageList = wx.getStorageSync('collectionList')    
+    that.setData({
+      collected:!that.data.collected
+    })
+    if(that.data.collected){//true
+      //adding
+      wx.showToast({
+        title: '收藏成功',
+      })
+      var updateList=[...storageList,that.data.content];
+      console.log(updateList.length);
+      wx.setStorageSync("collectionList", updateList)
+    }else{//false
+      wx.showToast({
+        title: '取消收藏',
+      })
+      var updateList=storageList.filter(item=>item.post_id!=that.data.id)
+      console.log(updateList.length);
+      wx.setStorageSync("collectionList", updateList) 
+    }
   }
 }
 
