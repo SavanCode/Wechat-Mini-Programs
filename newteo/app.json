@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/page2/newpage",
     "pages/fav/fav",
-    "pages/usercenter/usercenter"
+    "pages/usercenter/usercenter",
+    "pages/detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,7 +12,9 @@
     "navigationBarTitleText": "title",
     "navigationBarTextStyle": "black"
   }, 
-  "tabBar": {
+  "tabBar": { 
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
     "selectedColor": "#1AAD16",
     "list": [
       {

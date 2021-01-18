@@ -3,6 +3,11 @@ Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  onLoad:function(){
+    wx.setNavigationBarTitle({
+      title: '个人中心'
+    })
+  }
   // onLoad: function() {
   //   var that = this;
   //   // 查看是否授权

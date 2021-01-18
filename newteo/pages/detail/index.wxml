@@ -1,0 +1,5 @@
+<view class="article">
+	<text class="title">{{content.title}}</text>
+	<rich-text class="body" nodes="{{myrich}}"></rich-text>
+</view>
+

@@ -44,7 +44,9 @@
   align-items: center;*/
 }
 .newsRight{
-  background-color: blue;
+  /* background-color: rgb(226, 206, 52); */
+  padding-left: 10rpx;
+  padding-top: 10rpx;
   flex:4 0 auto; 
   width: 305rpx;
 }
@@ -79,6 +81,7 @@
 }
 .author{
   flex: 1 0 auto;
-  margin-bottom: 0;
-  text-align:end;
-}
+  margin-bottom: 0;  
+  height: 30px;
+  text-align: end;
+} 
