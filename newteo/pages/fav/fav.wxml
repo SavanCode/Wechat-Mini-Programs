@@ -18,10 +18,14 @@
 <block
  wx:for="{{collectionList}}"
  wx:for-item="item"
- wx:key="postId"
- wx:for-index="idx"
+ wx:key="posted_id"
+ wx:for-index="index"
 >
-	<view class="post-container">
+	<view
+	 class="post-container"
+	 data-news="{{item}}"
+	 bindtap="goDetail"
+	>
 		<view class="post-auther-date">
 			<image class="post-auther" src="{{item.author_avatar}}"></image>
 			<text class="post-date">{{item.author_name}}</text>
@@ -31,10 +35,40 @@
 		<image class="post-image" src="{{item.cover}}"></image>
 		<text class="post-content">{{item.summary}}</text>
 		<view class="post-like">
-			<image class="post-like-image" src="../../images/icon/chat.png"></image>
+			<image class="post-like-image" src="../../img/icon/chat.png"></image>
 			<text class="post-like-font">99</text>
-			<image class="post-like-image" src="../../images/icon/view.png"></image>
+			<image class="post-like-image" src="../../img/icon/view.png"></image>
 			<text class="post-like-font">33</text>
+		</view>
+	</view>
+</block>
+<text class="ending" selectable="false" space="false" decode="false">
+	{{ending}}
+</text>
+<text class="RecommendTitle" selectable="false" space="false" decode="false" wx:if="{{recommend.length>0}}">
+	推荐阅读
+</text>
+<block
+ wx:if="{{recommend}}"
+ wx:for="{{recommend}}"
+ wx:for-item="item"
+ wx:key="postId"
+ wx:for-index="idx"
+>
+	<view class="post-container">
+		<view class="post-auther-date">
+			<image class="post-auther" src="{{item.avatar}}"></image>
+			<text class="post-date">{{item.author}}</text>
+			<text class="post-date">{{item.dataTime}}</text>
+		</view>
+		<text class="post-title">{{item.title}}</text>
+		<image class="post-image" src="{{item.imgSrc}}"></image>
+		<text class="post-content">{{item.content}}</text>
+		<view class="post-like">
+			<image class="post-like-image" src="../../img/icon/chat.png"></image>
+			<text class="post-like-font">{{item.collection}}</text>
+			<image class="post-like-image" src="../../img/icon/view.png"></image>
+			<text class="post-like-font">{{item.reading}}</text>
 		</view>
 	</view>
 </block>

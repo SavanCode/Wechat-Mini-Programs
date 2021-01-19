@@ -81,3 +81,17 @@ swiper {
       vertical-align: middle;
         margin-right: 20px;
   }
+.RecommendTitle{
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: medium;
+  font-weight: bold;
+  color: darkviolet;
+  }
+  .ending{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: small;
+  }

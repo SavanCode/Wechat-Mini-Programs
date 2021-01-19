@@ -1,5 +1,5 @@
 /* pages/usercenter/usercenter.wxss */
-/* .userinfo {  
+.userinfo {  
   position: relative;  
   width: 750rpx;  
   height: 320rpx;  
@@ -19,7 +19,7 @@
   border-radius: 50%;  
   border: 2px solid #fff;  
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
-} */
+}
 
 button{
   margin:30px auto 0;

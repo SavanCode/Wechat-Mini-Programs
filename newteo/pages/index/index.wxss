@@ -22,7 +22,7 @@
 .body{ 
   display: block;
   margin-left: 10rpx;
-  margin-right: 10rpx;
+  margin-right: 10rpx; 
   padding: 0;
 }
 .flex-column{
@@ -32,7 +32,7 @@
   display: flex; flex-direction: row;
 }
 .newsItem{ 
- background-color: blanchedalmond;
+ background-color: #c9fbb8;
  margin-bottom: 30rpx;
  height: 180rpx;
  width: 100%;

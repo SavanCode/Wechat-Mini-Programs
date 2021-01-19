@@ -98,9 +98,7 @@ Page({
             image: '',
             duration: 1500,
             mask: false,
-            success: (result)=>{
-              
-            },
+            success: (result)=>{},
             fail: ()=>{},
             complete: ()=>{}
           });
@@ -115,9 +113,18 @@ Page({
       console.log(news.post_id);
       wx.navigateTo({
         url:"../detail/index?id=" + news.post_id//注意相对位置
-        })
-        
-    }
-  
-
+        }) 
+    },
+    onReachBottom: function () {
+      wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        image: '',
+        duration: 1500,
+        mask: false,
+        success: (result)=>{},
+        fail: ()=>{},
+        complete: ()=>{}
+      });
+    }, 
 })

@@ -57,16 +57,14 @@ const pageOptions = {
       wx.showToast({
         title: '收藏成功',
       })
-      var updateList=[...storageList,that.data.content];
-      console.log(updateList.length);
-      wx.setStorageSync("collectionList", updateList)
+      var updateList=[...storageList,that.data.content]; 
+      wx.setStorageSync("collectionList", updateList);
     }else{//false
       wx.showToast({
         title: '取消收藏',
       })
-      var updateList=storageList.filter(item=>item.post_id!=that.data.id)
-      console.log(updateList.length);
-      wx.setStorageSync("collectionList", updateList) 
+      var updateList=storageList.filter(item=>item.post_id!=that.data.id);
+      wx.setStorageSync("collectionList", updateList) ;
     }
   }
 }
