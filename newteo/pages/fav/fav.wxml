@@ -73,3 +73,26 @@
 	</view>
 </block>
 
+<view class="post-container">
+	<view class="post-auther-date">
+		<image class="post-auther" src="../../img/user.png"></image>
+		<text class="post-date">南山必胜客</text>
+		<text class="post-date">20 小时之前</text>
+	</view>
+	<text class="post-title">腾讯大学</text>
+	<video
+	 class="myVideo"
+	 src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+	 enable-danmu
+	 danmu-btn
+	 controls
+	></video>
+	<text class="post-content">全新上线的“微信学院”是一个公开对外的学习平台，共分为微信商学院、微信技术院、玩转微信和微信时刻4个版块。微信的合作伙伴、开发爱好者均可在此学习如何使用微信平台实现商业化应用、学习微信的技术教程、了解微信最新动态。</text>
+	<view class="post-like">
+		<image class="post-like-image" src="../../img/icon/chat.png"></image>
+		<text class="post-like-font">33</text>
+		<image class="post-like-image" src="../../img/icon/view.png"></image>
+		<text class="post-like-font">99</text>
+	</view>
+</view>
+

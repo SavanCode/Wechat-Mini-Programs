@@ -1,6 +1,13 @@
 //index.js
 const app = getApp()
 const DB = wx.cloud.database().collection("testlist")
+let name='';
+let age='';
+let id = '';
+let nameDelete = ''
+let updateID = ''
+let updateValue = ''
+
 Page({
   data: {
     avatarUrl: './user-unlogin.png',
@@ -9,22 +16,6 @@ Page({
     takeSession: false,
     requestResult: ''
   },
-  addData(){
-    console.log('调用添加数据的方法')
-    DB.add({
-      data:{
-        name:'panda bear',
-        price:9999
-      },
-      success(res) {
-        console.log("成功", res)
-      },
-      fail(res) {
-        console.log("失败", res)
-      }
-    })
-  },
-
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
@@ -50,6 +41,97 @@ Page({
       }
     })
   },
+
+  addName(event){
+      //console.log(event.detail.value)
+      name = event.detail.value
+    },
+
+  addAge(event){
+    //console.log(event.detail.value)
+    age = event.detail.value
+  },
+
+  addData() {
+    console.log('调用添加数据的方法')
+    DB.add({
+      data: {
+        name: name,
+        age: age
+      },
+      success(res) {
+        console.log("添加数据成功", res)
+      },
+      fail(res) {
+        console.log("添加数据失败", res)
+      }
+    })
+  },
+
+  getData() {
+    console.log('调用查询数据的方法')
+    DB.get({
+      success(res){
+        console.log('查询数据成功',res)
+      }
+    })
+  },
+  delDataInput(event){
+    //console.log(event.detail.value)
+    id = event.detail.value
+  },
+
+  delData() {
+    console.log('调用删除数据的方法')
+    DB.doc(id).remove({
+      success(res) {
+        console.log('删除数据成功', res.data)
+      }
+    })
+  },
+  delDataInputName(event){
+    //console.log(event.detail.value)
+    nameDelete = event.detail.value
+  },
+  
+  delDataByProperty() {
+    console.log('调用属性删除数据的方法')
+    DB.where({
+      name: nameDelete
+    }).remove({
+      success(res) {
+        console.log('删除数据成功', res.data)
+      },
+      fail(res) {
+        console.log("删除数据失败", res)
+      }
+    })
+  },
+  updateID(event) {
+    console.log(event.detail.value)
+    updateID = event.detail.value
+  },
+
+  updateValue(event) {
+    console.log(event.detail.value)
+    updateValue = event.detail.value
+  },
+  
+  updateData() {
+    console.log('调用修改更新数据的方法')
+    DB.doc(updateID).update({
+      data: {
+        name: updateValue
+      },
+      success(res) {
+        console.log('修改更新数据成功', res.data)
+      },
+      fail(res) {
+        console.log("修改更新数据失败", res)
+      }
+    })
+  },
+
 
   onGetUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {

@@ -95,3 +95,7 @@ swiper {
     margin: auto;
     font-size: small;
   }
+  .myVideo{
+    display: block;
+    margin: auto;
+  }
