@@ -1,0 +1,2 @@
+<!--pages/getopenid/getopenid.wxml-->
+<button bindtap="getopenid">getopenid</button>

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <button bindtap="getSum">云函数的求和运算</button>
+</view>
+<view>\n</view>
+<input bindinput="handleInput1" placeholder="数字1"></input>
+<input bindinput="handleInput2" placeholder="数字2"></input>
+<button bindtap="getSum1">云函数的求和运算</button>
