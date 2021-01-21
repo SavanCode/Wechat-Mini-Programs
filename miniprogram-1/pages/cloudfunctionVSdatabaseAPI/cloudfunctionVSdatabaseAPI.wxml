@@ -1,0 +1,3 @@
+<!--pages/cloudfunctionVSdatabaseAPI/cloudfunctionVSdatabaseAPI.wxml-->
+<button bindtap="databse">数据库API获取数据</button>
+<button bindtap="cloudFunction">云函数获取数据</button>

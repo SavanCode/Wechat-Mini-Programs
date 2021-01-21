@@ -1,0 +1,9 @@
+<picker mode="multiSelector"
+        bindcancel="bindCancel"
+        bindchange="bindChange"
+        bindcolumnchange="bindColumnChange"
+        value="{{multiIndex}}"
+        range="{{objectMultiArray}}"
+        range-key="label">
+    <slot></slot>
+</picker>

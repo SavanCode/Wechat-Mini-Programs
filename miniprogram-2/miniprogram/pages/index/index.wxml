@@ -2,7 +2,7 @@
 <view class="container">
 
 	<!-- 用户 openid -->
-	<view class="userinfo">
+	<!-- <view class="userinfo">
 		<button
 		 open-type="getUserInfo"
 		 bindgetuserinfo="onGetUserInfo"
@@ -13,10 +13,10 @@
 		<view class="userinfo-nickname-wrapper">
 			<button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
 		</view>
-	</view>
+	</view> -->
 
 	<!-- 上传图片 -->
-	<view class="uploader">
+	<!-- <view class="uploader">
 		<view class="uploader-text" bindtap="doUpload">
 			<text>上传图片</text>
 		</view>
@@ -28,10 +28,10 @@
 			 bindtap="previewImg"
 			></image>
 		</view>
-	</view>
+	</view> -->
 
 	<!-- 操作数据库 -->
-	<view class="uploader">
+	<!-- <view class="uploader">
 		<navigator
 		 url="../databaseGuide/databaseGuide"
 		 open-type="navigate"
@@ -39,10 +39,10 @@
 		>
 			<text>前端操作数据库</text>
 		</navigator>
-	</view>
+	</view> -->
 
 	<!-- 即时通信 -->
-	<view class="uploader">
+	<!-- <view class="uploader">
 		<navigator
 		 url="../im/im"
 		 open-type="navigate"
@@ -50,10 +50,10 @@
 		>
 			<text>即时通信 Demo</text>
 		</navigator>
-	</view>
+	</view> -->
 
 	<!-- 新建云函数 -->
-	<view class="uploader">
+	<!-- <view class="uploader">
 		<navigator
 		 url="../addFunction/addFunction"
 		 open-type="navigate"
@@ -61,10 +61,10 @@
 		>
 			<text>快速新建云函数</text>
 		</navigator>
-	</view>
+	</view> -->
 
 	<!-- 云调用 -->
-	<view class="uploader">
+	<!-- <view class="uploader">
 		<navigator
 		 url="../openapi/openapi"
 		 open-type="navigate"
@@ -72,7 +72,7 @@
 		>
 			<text>云调用</text>
 		</navigator>
-	</view>
+	</view> -->
 
 	<input placeholder="输入名字" bindinput="addName"></input>
 	<text>\n</text>

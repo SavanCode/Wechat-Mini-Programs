@@ -1,0 +1,6 @@
+<!--pages/uploadImg/uploadImg.wxml-->
+<button bindtap="handleTap">chooseImage上传</button>
+<image src="{{URL}}"></image>
+
+<button bindtap="selectAndUpload">uploadFile上传</button>
+<image src="{{URL}}"></image>

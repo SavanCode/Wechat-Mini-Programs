@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/uploadVideo/uploadVideo",
+    "pages/uploadImg/uploadImg",
+    "pages/cloudfunctionVSdatabaseAPI/cloudfunctionVSdatabaseAPI",
     "pages/getopenid/getopenid",
     "pages/index/index"
   ],

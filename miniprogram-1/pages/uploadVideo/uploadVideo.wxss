@@ -1,0 +1,46 @@
+/* pages/uploadVideo/uploadVideo.wxss */
+/* 预览 */
+.preview-warp{
+  display: flex;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*居中对齐*/
+  position: relative;
+  background-color: #fff;
+}
+.prew_video{
+    display: flex;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*居中对齐*/
+    position: relative;
+    background-color: #fff;
+}
+.prew_video[hidden]{
+    display: none;
+}
+.prew_video .play{
+    width: 48rpx;
+    height: 48rpx;
+}
+
+/* 上传按钮组 */
+.upimg{
+  width: 49%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  float: left;
+  background: #41C7DB;
+  text-align: center;
+  border: 1px solid #000;
+  /* border-left: 1px solid #000; */
+}
+.upvideo{
+  width: 49.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  float: left;
+  text-align: center;
+  border: 1px solid #000;
+  background: #fff
+}

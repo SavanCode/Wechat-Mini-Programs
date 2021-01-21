@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">  
+  <datepicker value="{{solar}}" bindchange="bindSolarChange">
+    <button type="default">公历</button>
+  </datepicker>
+  <datepicker value="{{lunar}}" chinese="{{true}}" bindchange="bindLunarChange">
+    <button type="default">农历</button>
+  </datepicker>
+
+  <block wx:for="{{feeds}}" wx:key="{{item.ArticleId}}">
+    <view class="list" data-para="{{item}}" bindtap="tapItem">
+      <view class="view_preinfo">
+        <text class="list_preinfo">{{item.CreateDateTime}} / {{item.ArticleAuthor}}</text>
+      </view>
+      <text class="list_title">{{item.ArticleTitle}}</text>
+      <view>
+        <block wx:for="{{item.Tags}}" wx:key="{{item.TagName}}">
+          <text class="list_tag" style="border: solid 1px {{item.BackgroundColor}};">{{item.TagName}}</text>
+        </block>
+      </view>
+    </view>
+  </block>
+
+<mp-cells ext-class="my-cells" title="带说明的列表项">
+      <mp-cell value="标题文字" footer="说明文字"></mp-cell>
+      <mp-cell>
+          <view>标题文字（使用slot）</view>
+          <view slot="footer">说明文字</view>
+      </mp-cell>
+      <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+          <mp-cell value="左滑可以删除" footer="说明文字"></mp-cell>
+      </mp-slideview>
+  </mp-cells>
+</view>

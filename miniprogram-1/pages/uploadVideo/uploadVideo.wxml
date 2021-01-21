@@ -1,0 +1,20 @@
+<!--pages/uploadVideo/uploadVideo.wxml-->
+
+<!-- 上传预览 -->
+<view class='preview-warp' wx:if="{{urls}}">
+  <image  src='{{urls}}' />
+</view>
+<view class="prew_video" hidden="{{chooesVideo==''}}">
+  <video bindfullscreenchange="bindVideoScreenChange" src="{{chooesVideo}}" ></video>
+</view>
+
+<!-- 上传按钮 -->
+<view class='upimg' bindtap='chooseImg'>上传图片</view>
+<view class='upvideo' bindtap='chooseVideo'>上传视频</view>
+<view class='upimg' bindtap='uploadImg'>确定上传图片（还没绑定）</view>
+<view class='upvideo' bindtap='uploadVideo'>确定上传视频</view>
+
+<text>
+  上传图片 - 可以上传多个 但是没有分为两个图片
+  上传视频 - 分成了两步骤 但是注意加一个loading time 因为上传有时会有卡顿，不然重复点击，会上传多个
+</text>
