@@ -1,4 +1,4 @@
-<style lang="less">
+  <style lang="less">
   input {
     border: 1rpx solid #ccc;
     display: inline-block;
@@ -314,3 +314,5 @@ module.exports.getTime = getTime;
     }
 }
 </config>
+
+ 
