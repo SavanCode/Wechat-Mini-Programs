@@ -1,0 +1,9 @@
+<view class="article" bindtap="liked"> 
+<view class="detailSetting">
+	<image class="detailImg" src="{{collected ? '../../img/Liked.png' :'../../img/notLiked.png'}}"></image>
+	<button open-type="share" catchtap="share" style="left:-28rpx;width: fit-content;margin: 0;padding: 0 !important;border:none" plain="true" ><image class="detailImg" src="../../img/share.png"></image></button>
+</view>
+	<text class="title">{{content.title}}</text>
+	<rich-text class="body" nodes="{{myrich}}"></rich-text>
+</view>
+

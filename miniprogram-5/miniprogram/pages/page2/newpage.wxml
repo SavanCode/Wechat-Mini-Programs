@@ -1,0 +1,39 @@
+<!-- pages/page2/newpage.wxml-->
+<!-- 基本的数据传输 -->
+<view>{{msg}}</view>
+<view id="{{id}}">绑定属性渲染</view> 
+
+<!-- 逻辑运算 -->
+<view>三个数的总和 ： {{a+b+c}}</view>
+<view>{{a===1? "a是1":"a不是1"}}</view>
+<view>a,b,c 为 {{[a,b,c]}}</view> 
+
+<!-- 条件运算 -->
+<view wx:if="{{a==2}}">if的条件成立 你就会看到我</view>
+<view wx:if="{{b>1}}">另一个成立的条件</view>
+<view wx:if="{{c==4}}">确定c的if条件成立</view>
+<view wx:else>C不是4 的else条件</view>
+<block wx:if="{{a==2}}">
+  <view>显示a</view>
+  <view>显示b</view>
+</block>
+
+<!-- 列表渲染 -->
+<block wx:for="{{array}}" wx:for-index="index" wx:for-item="item">
+  <item>{{index}}:</item>
+  <view>{{item.message}}</view>
+</block>
+
+<!-- template & style -->
+<template name="odd">
+  <view style='color:red'> odd template</view>
+</template>
+<template name="even">
+  <view> even template</view>
+</template>
+<!-- <block wx:for="{{[1,2,3,4,5]}}">,
+<template is="{{item % 2 ==0 ? 'even': 'odd'}}"  />
+</block> -->
+
+ <view style="color:{{eleColor}}">动态改变样式</view>
+ <button bindtap='clickBlue'>变蓝</button>
