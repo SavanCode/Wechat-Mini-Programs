@@ -1,0 +1,24 @@
+
+.recomTitle{
+    color: grey;
+    margin-top: 30rpx;
+  }
+  
+  .recomTop{
+    padding: 0;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  .recomLeft{
+    font-size: small;
+    padding: 10rpx 10rpx 10rpx 0;
+  }
+  .recomRight{
+     font-size: x-small;
+     border:  solid black 1rpx;
+     padding: 10rpx;
+     border-radius: 30rpx;
+  }
+

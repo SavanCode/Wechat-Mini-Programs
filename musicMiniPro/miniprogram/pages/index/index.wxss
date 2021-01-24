@@ -1,0 +1,57 @@
+/* miniprogram/pages/index/index.wxss */
+@import '../../iconfont/iconfont.wxss';
+swiper {
+  width: 100%;
+  height: 400rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 400rpx;
+}
+.navContainer{
+ display: inline-flex;
+ justify-content: space-around;
+ margin-top: 15rpx;
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.iconfont{
+  font-size: 60rpx;
+  border-radius: 60%;
+  padding: 15rpx;
+  background-color: cornflowerblue;
+  color: white;
+}
+.navItem > text{
+  margin-top: 15rpx;
+ font-size: small;
+}
+
+.albumScroll{
+  display: flex;
+  height:180rpx;
+}
+
+.album{
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30rpx;
+}
+.album > image{
+  width: 100rpx; 
+  height: 100rpx;
+}
+.album > text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;/*这行以上必要*/
+  font-size: x-small;
+}

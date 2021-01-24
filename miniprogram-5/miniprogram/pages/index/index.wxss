@@ -41,7 +41,7 @@
   text-overflow:ellipsis;
   display:-webkit-box; 
   -webkit-box-orient:vertical;
-  -webkit-line-clamp:2;
+  -webkit-line-clamp:1;
   overflow: hidden; 
   /* width: 95%; */
   max-height: min-content;
@@ -53,14 +53,13 @@
  
 }
 .time{
-  flex: 1 1 0;
-  height: 33%;
+  flex: 1 1 0; 
   margin-top: 5rpx;
   margin-bottom: 0;
 }
 .author{
   flex: 1 1 0;
   margin-bottom: 0;  
-  height: 30px;
+  height: 20rpx;
   text-align: end;
 } 

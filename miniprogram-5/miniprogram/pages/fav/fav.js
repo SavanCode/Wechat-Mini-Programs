@@ -104,4 +104,9 @@ Page({
         url:"../detail/index?id=" + news.post_id//注意相对位置
         })
     },
+    onShow: function() {
+      // 当返回当前页面的时候，会自动调用这个参数，则实现自动返回刷新
+      this.onLoad()
+      this.onReady()
+    }
 })

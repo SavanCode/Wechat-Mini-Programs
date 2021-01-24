@@ -1,0 +1,103 @@
+<!--miniprogram/pages/index/index.wxml-->
+<swiper
+ indicator-dots="true"
+ autoplay="true"
+ interval="2000"
+>
+	<swiper-item
+	 wx:for="{{bannerList}}"
+	 wx:key="index"
+	 wx:for-index="index"
+	>
+		<image src="{{item.pic}}"></image>
+	</swiper-item>
+</swiper>
+
+<view
+ class="navContainer"
+ hover-class="none"
+ hover-stop-propagation="false"
+>
+	<view
+	 class="navItem"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="iconfont icon-biaoqiankuozhan_tuijian-121"></view>
+		<text>歌曲推荐</text>
+	</view>
+	<view
+	 class="navItem"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="iconfont icon-songlist-01"></view>
+		<text>歌单</text>
+	</view>
+	<view
+	 class="navItem"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="iconfont icon-paihangbang"></view>
+		<text>排行榜</text>
+	</view>
+	<view
+	 class="navItem"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="iconfont icon-diantai"></view>
+		<text>电台</text>
+	</view>
+	<view
+	 class="navItem"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="iconfont icon-biaoqiankuozhan_zhibo-342"></view>
+		<text>直播</text>
+	</view>
+
+</view>
+
+<NavHeader
+ title="推荐歌单"
+ left="精心为你推荐"
+ right="查看更多"
+></NavHeader>
+
+<scroll-view
+ class="albumScroll"
+ enable-flex
+ scroll-x
+ bindscroll="scroll"
+>
+	<!-- -->
+	<view
+	 class="album"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	 wx:for="{{recommendList}}"
+	 wx:key="index"
+	 wx:for-index="index"
+	>
+		<image
+		 src="{{item.picUrl}}"
+		 lazy-load="false"
+		 binderror=""
+		 bindload=""
+		>
+		</image>
+		<text selectable="false" space="false" decode="false">
+			 {{item.name}}
+			 </text>
+	</view>
+</scroll-view>
+
+<NavHeader
+ title="排行榜"
+ left="热歌风向标"
+ right="查看更多"
+></NavHeader>
+

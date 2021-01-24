@@ -1,0 +1,22 @@
+<view
+ class="recommend"
+ hover-class="none"
+ hover-stop-propagation="false"
+>
+	<view class="recomTitle">
+		{{title}}
+	</view>
+	<view
+	 class="recomTop"
+	 hover-class="none"
+	 hover-stop-propagation="false"
+	>
+		<view class="recomLeft">
+			{{left}}
+		</view>
+		<view class="recomRight">
+			{{right}}
+		</view>
+	</view>
+</view>
+
