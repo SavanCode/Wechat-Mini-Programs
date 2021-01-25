@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/login/login",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/video/video"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -8,6 +11,30 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "网易云音乐山寨版",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#d43c33",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabs/tab-home.png",
+        "selectedIconPath": "images/tabs/tab-home-current.png",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "iconPath": "images/tabs/select.png",
+        "selectedIconPath": "images/tabs/selected.png",
+        "text": "视频"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/tabs/tab-my.png",
+        "selectedIconPath": "images/tabs/tab-my-current.png",
+        "text": "个人中心"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

@@ -1,0 +1,72 @@
+/* miniprogram/pages/login/login.wxss */ 
+page{
+    height: 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.LTbg{
+    height: 150rpx;
+}
+.bg{
+    font-size: 120rpx;
+    color: #e0dbdb;
+    position:relative;
+    left: 0rpx;
+    top: -20rpx;
+}
+.title{
+    position:relative;
+    left: 50rpx;
+    top: -90rpx;
+    font-size:x-large
+}
+.input-section{
+    margin: 60rpx;
+}
+.input-item {
+    margin-bottom: 50rpx;
+    background-color: #f1f1f1;
+    padding: 10rpx 10rpx 10rpx 20rpx;
+    height: 100rpx;
+}
+.tit{
+    padding: 20rpx 0 20rpx 0;
+}
+
+.confirm-btn{
+    width: 630rpx!important;
+    height: 76rpx;
+    line-height: 76rpx;
+    border-radius: 50rpx;
+    margin-top: 50rpx;
+    background: rgb(41, 172, 238);
+    color: #fff;
+    font-size: large;
+    padding: 0;
+}
+.confirm-btn2:after{
+    border-radius: 100px;
+}
+
+
+.forget-section{
+    font-size: small;
+    color: #fc4343;
+    text-align: center;
+    margin-top: 40rpx;
+}
+
+.register-section{     
+    color: #606266;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 50rpx;
+}
+.register-section text{
+    color: #fc4343;
+    margin-left: 10rpx;
+}

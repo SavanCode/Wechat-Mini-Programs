@@ -1,5 +1,6 @@
 <!--miniprogram/pages/index/index.wxml-->
 <swiper
+ class="banner"
  indicator-dots="true"
  autoplay="true"
  interval="2000"
@@ -100,4 +101,45 @@
  left="热歌风向标"
  right="查看更多"
 ></NavHeader>
+<!-- next margin不行 不知道为什么 -->
+<swiper
+ class="playList"
+ circular="{{true}}"
+ next-margin="15rpx"
+ previous-margin="15rpx"
+>
+	<swiper-item
+	 class="playListItem"
+	 wx:for="{{topList}}"
+	 wx:key="index"
+	 wx:for-index="index"
+	 wx:for-item="topListItem"
+	>
+		<view
+		 class=""
+		 hover-class="none"
+		 hover-stop-propagation="false"
+		>
+			{{topListItem.name}} >
+		</view>
+		<view
+		 wx:for="{{topListItem.tracks}}"
+		 wx:key="id"
+		 wx:for-index="index1"
+		 wx:for-item="tracksItem"
+		 class="tracks"
+		 hover-class="none"
+		 hover-stop-propagation="false"
+		>
+			<image src="{{tracksItem.al.picUrl}}"></image>
+			<text class="tracksIndex" selectable="false" space="false" decode="false">
+			{{index1+1}}
+			</text>
+			<text class="tracksName" selectable="false" space="false" decode="false">
+			{{tracksItem.name}}
+			</text>
+		</view>
+	</swiper-item>
+
+</swiper>
 

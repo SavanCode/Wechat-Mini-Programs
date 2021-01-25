@@ -1,4 +1,6 @@
-
+.recommend{
+  margin: 0 10rpx 0 10rpx;
+}
 .recomTitle{
     color: grey;
     margin-top: 30rpx;

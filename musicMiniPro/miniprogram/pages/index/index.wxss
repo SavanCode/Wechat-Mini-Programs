@@ -1,11 +1,11 @@
 /* miniprogram/pages/index/index.wxss */
 @import '../../iconfont/iconfont.wxss';
-swiper {
+.banner {
   width: 100%;
   height: 400rpx;
 }
 
-swiper image {
+.banner image {
   width: 100%;
   height: 400rpx;
 }
@@ -34,24 +34,69 @@ swiper image {
 
 .albumScroll{
   display: flex;
-  height:180rpx;
+  height:200rpx;
+  margin: 0 10rpx 0 10rpx;
 }
 
 .album{
-  width: 100rpx;
+  width: 120rpx;  
   display: flex;
   flex-direction: column;
   margin-right: 30rpx;
 }
 .album > image{
-  width: 100rpx; 
-  height: 100rpx;
+  flex: 4 0 0; 
+  width: 120rpx;    
 }
-.album > text{
-  display: -webkit-box;
+.album > text{  
+  flex: 1 0 40rpx;  
+  font-size: x-small; 
+  overflow: hidden;  
+  /* display: -webkit-box;  这里有个神奇的小bug 这个应该使用的 但是省略号居然在第一行了*/
   -webkit-box-orient: vertical;
-  -webkit-line-clamp:3;
+  -webkit-line-clamp:2; 
+  text-overflow:ellipsis;   
+  /*这行以上必要*/
+  padding-bottom: 10rpx;
+}
+
+/*playlist*/
+.playList{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400rpx;
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+
+.playListItem{ 
+  width: 90% !important;    
+  background-color: #f5f4f4;
+}
+
+.tracks{
+  display: flex;
+  flex-direction: row;
+   margin: 15rpx 0 10rpx 0;
+   justify-self: center;
+}
+.tracks > image{
+  width: 80rpx;
+  height: 100rpx;
+  flex:1 0 auto;
+}
+.tracksIndex{ 
+  flex:0.3 0 auto; 
+  text-align: center;
+  font-size: small; 
+}
+
+.tracksName{ 
+  flex:2 0 0;
+  display: block;
   overflow: hidden;
-  text-overflow:ellipsis;/*这行以上必要*/
-  font-size: x-small;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  font-size: small; 
 }

@@ -1,0 +1,185 @@
+@import '../../iconfont/iconfontUser.wxss';
+page{
+     height: 100%;
+ }
+ .upper,lower{
+    height: 50%;
+ }
+ /* 背景 */
+.bg{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+ .bgImg{
+     width: 100%;
+     opacity: 0.7;
+     filter: blur(1px);
+ }
+ /* 头像 名字 */
+ .userInfo{
+     display: flex;
+     flex-direction: row;
+     height: 100rpx;
+     margin-top: 15%;
+     margin-left: 20rpx;
+     margin-bottom: 25rpx;
+ }
+
+.portrait{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    border:  solid white;
+}
+.usernameArea{
+    display: flex;
+}
+.username{
+    margin: auto;
+    margin-left: 15rpx;
+}
+/* VIP */
+.vip{
+display: flex;
+flex-direction: column;
+margin-left: 15rpx;
+margin-right: 15rpx;
+background: rgba(0, 0, 0, .7);
+color: #f7d680;
+height: 300rpx;
+}
+
+.vipTop{
+    display: flex;
+    flex-direction: row;
+}
+.vip-bg{
+    position: absolute;
+    border-radius: 16rpx 16rpx 0 0;
+    margin-top: 40rpx;
+    right: 15rpx;
+    width: 400rpx;
+    background-blend-mode: saturation;
+    height: 200rpx;
+}
+
+.vipTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20rpx; 
+    font-size: small;
+}
+.titR{ 
+    width: 132rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: small;
+    color: #36343c;
+    border-radius: 20px;
+    background: #f9e6af;
+    z-index: 1;
+}
+.mu1{
+    margin-top: 50rpx;
+    margin-left: 20rpx;
+}
+.mu2{ 
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    font-size: small;
+}
+/* 弧形 */
+.cover-container {
+    margin-top: -60rpx;
+    padding: 0 30rpx;
+    position: relative;
+    background: #f5f5f5; 
+}
+  
+.cover-container .arc{
+position:absolute;
+left: 0;
+top: -34rpx;
+width: 100%;
+height: 36rpx;
+}
+/* nav- 个人中心 */
+.nav-section{
+    background-color: white;
+    display: flex;
+    margin: 0 15rpx 0 15rpx;
+    padding: 15rpx 0 15rpx 0;
+}
+.nav-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+.nav-item .iconfont{
+   font-size: 50rpx;
+   color: rgb(41, 172, 238);
+}
+
+/* 个人中心列表 */
+.personalContent {
+    background: white;
+    margin: 20rpx 15rpx 20rpx 15rpx;
+    font-size: small;
+  }
+  
+  /* 最近播放 */
+  .personalContent .scrollView {
+    display: flex;
+    height: 160rpx;
+  }
+  .personalContent .recentPlay {
+    display: flex;
+  }
+  
+  .recentPlayContainer .title {
+    padding-left: 20rpx; 
+    color: #333;
+    line-height: 80rpx;
+  }
+  
+  .personalContent .recentPlay image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+  }
+   
+  .personalList {
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: column; 
+  }
+.card-item{
+    border-top: 1rpx solid #eee;
+    flex: 1 0 80rpx;
+    line-height: 80rpx;
+    padding:  15rpx ; 
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } 
+  
+/* 最近播放记录 */
+.recentScroll {
+    display: flex;
+    height: 200rpx;
+  }
+  .recentItem {
+    margin-right: 20rpx;
+  }
+  .recentItem image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+  }

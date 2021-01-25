@@ -4,6 +4,7 @@ Page({
   data: {
     bannerList:[],
     recommendList:[],//albumList-scroll
+    topList:[]
   },
 
   /**
@@ -20,6 +21,17 @@ Page({
       this.setData({
         recommendList:personalized.result
       })
+      //musicRankList 这里我们需要请求5次
+      let index=0;
+      let result=[];
+      while(index<5){ 
+        let musicRank= await request('/top/list',{idx:index++});
+        let topListItem={name:musicRank.playlist.name,tracks:musicRank.playlist.tracks.slice(0,3)}
+        result.push(topListItem);
+        this.setData({
+          topList:result
+        })}
+        console.log("result",result)
   },
 
   /**
