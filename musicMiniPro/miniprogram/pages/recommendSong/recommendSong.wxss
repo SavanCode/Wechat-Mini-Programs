@@ -1,0 +1,17 @@
+/* miniprogram/pages/recommendSong/recommendSong.wxss */
+page,.wapper{
+    height: 100%;
+} 
+.wapper{
+  display:flex;
+  flex-direction: column
+} 
+.header,.header>image{
+   width: 100%;
+}
+.listTop{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}

@@ -31,7 +31,7 @@ Page({
         this.setData({
           topList:result
         })}
-        console.log("result",result)
+        //console.log("result",result)
   },
 
   /**

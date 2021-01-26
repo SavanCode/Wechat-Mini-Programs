@@ -1,4 +1,5 @@
 // miniprogram/pages/user/user.js
+import { request } from "../../utils/util";
 let startY = 0; // 手指起始的坐标
 let moveY = 0; // 手指移动的坐标
 let moveDistance = 0; // 手指移动的距离
@@ -8,19 +9,16 @@ Page({
     coverTransform: 'translateY(0)',
     coveTransition: '',
     //获得用户数据
-    userInfo: {}, // 用户信息
-    recentPlayList: [], // 用户播放记录
+    userInfo: {},  
+    recentPlayList: [], 
   }, 
-  onLoad: function (options) {
-     // 读取用户的基本信息
+  onLoad: function (options) { 
      let userInfo = wx.getStorageSync('userInfo');
-     if(userInfo){ // 用户登录
-       // 更新userInfo的状态
+     if(userInfo){  
        this.setData({
          userInfo: JSON.parse(userInfo)
        })
-       
-       // 获取用户播放记录
+        
        this.getUserRecentPlayList(this.data.userInfo.userId)}
   },
   handleTouchStart(event){
@@ -54,13 +52,15 @@ Page({
     })
   },  
   // 获取用户播放记录的功能函数
-  async getUserRecentPlayList(userId){
+  getUserRecentPlayList: async function(userId){
     let recentPlayListData = await request('/user/record', {uid: userId, type: 0});
-    let index = 0;
-    let recentPlayList = recentPlayListData.allData.splice(0, 10).map(item => {
-      item.id = index++;
-      return item;
-    })
+    console.log(recentPlayListData)
+    let recentPlayList = recentPlayListData.allData.splice(0, 10);
+    //let index = 0;
+    // let recentPlayList = recentPlayListData.allData.splice(0, 10).map(item => {
+    //   item.id = index++;
+    //   return item;
+    // })
     this.setData({
       recentPlayList
     })

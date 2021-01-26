@@ -12,15 +12,16 @@
     margin-top: 10rpx;
     display: flex;
     justify-content: space-between;
+    height: 50rpx;
   }
   .recomLeft{
     font-size: small;
-    padding: 10rpx 10rpx 10rpx 0;
+    line-height: 50rpx;
   }
-  .recomRight{
-     font-size: x-small;
-     border:  solid black 1rpx;
-     padding: 10rpx;
-     border-radius: 30rpx;
-  }
-
+  .recomRight {
+    font-size: x-small;
+    border: solid black 1rpx;
+    padding: 0 10rpx;
+    border-radius: 30rpx;
+    line-height: 50rpx;
+}

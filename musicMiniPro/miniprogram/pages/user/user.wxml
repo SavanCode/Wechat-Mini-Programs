@@ -88,7 +88,7 @@
 					<view
 					 class="recentItem"
 					 wx:for="{{recentPlayList}}"
-					 wx:key="{{id}}"
+					 wx:key="id"
 					>
 						<image src="{{item.song.al.picUrl}}"></image>
 					</view>

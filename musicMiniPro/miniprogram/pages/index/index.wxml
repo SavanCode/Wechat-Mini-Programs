@@ -116,7 +116,7 @@
 	 wx:for-item="topListItem"
 	>
 		<view
-		 class=""
+		 class="title"
 		 hover-class="none"
 		 hover-stop-propagation="false"
 		>

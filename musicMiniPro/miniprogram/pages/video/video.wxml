@@ -1,2 +1,105 @@
 <!--miniprogram/pages/video/video.wxml-->
-<text>miniprogram/pages/video/video.wxml</text>
+<view
+ class="top"
+ hover-class="none"
+ hover-stop-propagation="false"
+>
+	<view class="topL iconfont icon-shipin">
+
+	</view>
+	<view class="search">
+		搜索音乐
+	</view>
+	<view class="topR iconfont icon-yinle">
+
+	</view>
+</view>
+<scroll-view
+ class="navScroll"
+ scroll-x="true"
+ scroll-into-view="{{'moveto'+choseNav}}"
+ scroll-with-animation="{{true}}"
+ enable-flex
+>
+	<!--  
+scroll-into-view  scroll-with-animation 动态的向左移动效果
+ -->
+	<view
+	 class="navItem"
+	 wx:for="{{navList}}"
+	 wx:key="index"
+	 id="{{'moveto'+item.id}}"
+	>
+		<view
+		 class="title {{choseNav === item.id?'active': ''}}"
+		 hover-class="none"
+		 hover-stop-propagation="false"
+		 bindtap="changeNav"
+		 id="{{item.id}}"
+		>
+			{{item.name}}
+		</view>
+	</view>
+</scroll-view>
+
+<scroll-view
+ class="videoScroll"
+ scroll-y="true"
+ refresher-enabled
+ bindrefresherrefresh="handleRefresher"
+ refresher-triggered="{{isRefresh}}"
+ bindscrolltolower="scrolltolower"
+ enable-flex
+>
+	<view
+	 class="videoItem"
+	 wx:for="{{videoList}}"
+	 wx:key="index"
+	>
+		<view class="post-container">
+			<view class="post-auther-date">
+				<view class="left">
+					<image class="post-auther" src="{{item.data.creator.avatarUrl}}?{{item.data.creator.avatarUrl}}:../../images/user/missing-face.png"></image>
+					<text class="post-date" wx:if="{{item.data.creator.nickname}}">{{item.data.creator.nickname}}</text>
+					<text class="post-date" wx:else>活跃用户</text>
+					<text class="post-date">20 小时之前</text>
+				</view>
+				<button open-type="share" style="width: 60rpx; height: 60rpx; padding: 0;">
+					<text class="iconfont icon-share"> </text>
+				</button>
+			</view>
+			<text class="post-title">{{item.data.title}} </text>
+			<video
+			 wx:if="{{item.data.vid===choseVideo}}"
+			 poster="{{item.data.coverUrl}}"
+			 class="myVideo"
+			 custom-cache="{{false}}"
+			 bindplay="playVideo"
+			 show-center-play-btn="{{true}}"
+			 id="{{item.data.vid}}"
+			 src="{{item.data.urlInfo.url}}"
+			 object-fit="fill"
+			 enable-danmu
+			 danmu-btn
+			 controls
+			></video>
+			<image
+			 wx:else
+			 class="videoPoster"
+			 id="{{item.data.vid}}"
+			 bindtap="playVideoImg"
+			 src="{{item.data.coverUrl}}"
+			 alt=""
+			/>
+			<text class="post-content" wx:if="{{item.data.description}}">{{item.data.description}}</text>
+			<text class="post-content" wx:else>每一天的开心从这里开始</text>
+			<view class="post-like">
+				<text class="post-like-image iconfont icon-pinglun " ></text>
+				<text class="post-like-font">{{item.data.commentCount}}</text>
+				<text class="post-like-image iconfont icon-dianzan"></text>
+				<text class="post-like-font">{{item.data.praisedCount}}</text>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+
