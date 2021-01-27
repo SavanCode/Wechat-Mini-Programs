@@ -1,0 +1,142 @@
+/* miniprogram/pages/song/song.wxss */
+@import '../../iconfont/iconfontSong.wxss';
+page,.wapper{  
+  height: 100%;
+}
+
+.wapper{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat:no-repeat; 
+  background-size: 100% 100%; 
+}
+.bg{
+  z-index: -100;
+  position: absolute;
+  filter: blur(35px);
+  width: 100%;
+  height: 70%;
+}
+
+.author{
+    width: 100%;
+    text-align: center;
+}
+/* 磁盘效果 */
+.fullNeddle {
+    position: relative; 
+    top: 60rpx;
+    z-index: 100; 
+}
+.circle {
+    position: relative;
+    z-index: 100;
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    background: #fff; 
+    margin: auto;
+}
+.needle {
+    position: relative;
+    width: 200rpx;
+    height: 300rpx;
+    margin: auto;
+    top: -30rpx;
+    padding-left: 120rpx;   
+    transform-origin: 150rpx 35rpx; 
+    transform: rotate(-30deg);
+    transition: transform 1s;
+}
+
+.disc {
+  position: absolute;
+  height: 600rpx;
+  width: 600rpx;
+  top: 250rpx;
+  left: 100rpx;
+}
+.cd { 
+  width: 600rpx;
+  height: 600rpx;
+}
+.musicImg {
+  position: absolute;
+  z-index: -10;
+  width: 400rpx;
+  top: 100rpx;
+  left: 100rpx;
+  height: 400rpx;
+  border-radius: 30%;
+}
+/* 动态 */
+.needleRotate {
+    transform: rotate(0deg);
+  }
+
+.discAnimation { 
+    animation: rotation 8s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  
+/* 进度条控制区域 */
+.progress {  
+  margin-top: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+  .barControl { 
+    width: 450rpx;
+    height: 4rpx;
+    background: rgba(0, 0, 0, 0.4);
+    margin: auto; 
+  }
+  
+  
+  .audio-Time-Bar { 
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 4rpx;
+    background: #29acee; 
+  }
+  
+  .audio-circle {
+    /* margin-bottom: 10rpx; */
+    position: relative;
+    top: -10rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background: #fdfdfd;
+}
+  .controlBar{ 
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    text-align: center; 
+  }
+ .timeNum{
+    margin:0 30rpx;
+  }
+  .iconfont{
+    flex: 1 0 auto;
+    margin: 50rpx 0;
+    color:#29acee;
+    font-size: large; 
+  }
+  

@@ -1,0 +1,38 @@
+<!--miniprogram/pages/song/song.wxml-->
+<view class="wapper">
+	<image class="bg" src="{{songContent.al.picUrl}}" />
+	<!-- <view class="author">{{songContent.ar[0].name}}</view> -->
+	<view class="fullNeddle">
+		<view class="circle"></view>
+		<image class="needle {{playing && 'needleRotate'}}" src="../../images/song/needle.png"></image>
+	</view>
+
+	<view class="disc {{playing && 'discAnimation'}}">
+		<image class="cd" src="../../images/song/disc.png"></image>
+		<image class="musicImg" src="{{songContent.al.picUrl}}"></image>
+	</view>
+	<view class="progress">
+		<text class="timeNum">{{currentTime}}11.22</text>
+		<view class="barControl">
+			<view class="audio-Time-Bar" style="width: {{currentWidth + 'rpx'}}">
+				<view class="audio-circle"></view>
+			</view>
+		</view>
+		<text class="timeNum">{{durationTime}}11.22</text>
+	</view>
+	<view class="controlBar">
+		<view class="iconfont icon-houtui"></view>
+		<view
+		 wx:if="{{playing}}"
+		 class="iconfont icon-play"
+		 bindtap="controlMusic"
+		></view>
+		<view
+		 wx:else
+		 class="iconfont icon-play-01"
+		 bindtap="controlMusic"
+		></view>
+		<view class="iconfont icon-qianjinxiayige"></view>
+	</view>
+</view>
+

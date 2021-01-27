@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2351464_x6gymnv535.eot?t=1611718456003'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_2351464_x6gymnv535.eot?t=1611718456003#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOIAAsAAAAAB/AAAAM7AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqDBIJIATYCJAMUCwwABCAFhG0HUhveBhEVnH3IfiTG4Da6igfT5ganW7ImmmjzTRChDr2XZFuWkzLQBExOEXkC3ABgaqdAAGzNOWCjIkxR1o48+kIe+NK02/7ncnrTEpjfznJca9HwjnoBRhMosLEHWYGUc4PuIiZFXVwPARz5KIM0ubXpgsUAugkgw/WgPtiKH4MJUhbB7xhrkJV4WLVIPQBW8M/LTyqJBYWnAX07DGzanwZfvhkdp8V0pwiC7axAMAk0UAYwIGM77cPRMl4Gjct+Z2gAOCwK9YUv5qt8M2lpuRA4BQcTYFDb/Hni42QmANDAThj4AuZroU1BwVehoOGbEd7LWh4ADgiA4cAcwCiCXOADTMaMCQlhlqzjBq5ffDDOOqD/2vjQkuyDNmwZtW7Twb3ZBq7fbOy579DGLP2njd57L1+w437RMYfiaev37127ad2+A9k3bB6KDjm89+CmQwe6xeuWbBCJfOclrV+8FhOFbgqP44LIdDM9ZyMZcn5S3fobcxXKtalIsfKlFol71at5cDMPOm7KVXXnxWFtDkWLR7a7uLNqrk0dKlPtfdtdc/+OyuQyjfprzfOsARUZMiBTth3qeLbM3RbZ5Dx4hYqjMwcF44K9wiuZr4RJww4PWycb3bx5s8CZ7uFV27+J3EYyob/TVtirTAZcpO6q2wDqufpP2kW9VLdYkBbrXDr+Zd+h9u4f3Xqlr/PPRgaAV9Wpzr1psWGanPeuYLLgBwkm5plcBAyeSXMxP3V41DP0qKzEAb/FnYk326iz3nJSsGTVoAjIa9XYXGCjhiwDHhFVwMdSHxylaT45IjNj0YgJgVLMs0DIwAlQpOMGaDLwEDXka/DIxm/wySAaHN0k85wRlmKiT2fClnGA7g+6j0EgE59E9gPl5FoyRZz5QRp1CKq8rKfuGJC2GDDOsmYWICh6uFmboXMREkWDPeeKOTVFIbpelPfRL040JmwZB6D7A7qPQdDifGq8/4Fyci0N0Ga8H6RR1w9U5JQT0Ls8TKK9yiXjLGuYBSAoeuBmtULnIpC6WxnsOUctiKaGAhYSU+X58Ur/jGsAB5jPEyVajHjik26MboPR4cf6/LXEnYoTT3qfnOnLymrDdYsFAA==') format('woff2'),
+  url('//at.alicdn.com/t/font_2351464_x6gymnv535.woff?t=1611718456003') format('woff'),
+  url('//at.alicdn.com/t/font_2351464_x6gymnv535.ttf?t=1611718456003') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_2351464_x6gymnv535.svg?t=1611718456003#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qianjinxiayige:before {
+  content: "\e804";
+}
+
+.icon-houtui:before {
+  content: "\e604";
+}
+
+.icon-play-01:before {
+  content: "\e701";
+}
+
+.icon-play:before {
+  content: "\e600";
+}
+

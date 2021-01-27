@@ -2,5 +2,7 @@
   "usingComponents": {
     "NavHeader":"/components/NavHeader/index"
   },
-  "navigationBarTitleText": "云音乐"
+  "navigationBarTitleText": "云音乐",
+  "navigationBarBackgroundColor": "#29acee",
+  "navigationBarTextStyle": "white"
 }

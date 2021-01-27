@@ -34,14 +34,18 @@ Page({
     wx.hideLoading({
     })
     //还没做完cookie的话 先comment 
-    if(result.code="301"){
+    let userInfo = wx.getStorageSync('userInfo');
+    if(result.code="301"&&!userInfo){
       wx.showToast({
-        title: '请先登录哦~',
-        icon: 'none'
+        title: '请先登录',
+        icon: 'none',
+        success: () => {
+          // 跳转至登录界面
+          wx.reLaunch({
+            url: '/pages/login/login'
+          })
+        }
       }) 
-      // wx.redirectTo({
-      //   url: '/pages/login/login',
-      // })console.log()
     } 
     console.log("更新video列表",result)
     if(result.datas.length===0){

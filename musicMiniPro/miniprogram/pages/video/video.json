@@ -1,5 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "云视频",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#29acee",
+  "navigationBarTextStyle": "white"
 }

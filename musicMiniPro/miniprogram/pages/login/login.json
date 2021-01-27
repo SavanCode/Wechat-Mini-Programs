@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "登陆中心"
+  "navigationBarTitleText": "登陆中心",
+  "navigationBarBackgroundColor": "#29acee",
+  "navigationBarTextStyle": "white"
 }

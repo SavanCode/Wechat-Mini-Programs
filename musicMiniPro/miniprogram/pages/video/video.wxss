@@ -6,6 +6,7 @@
     justify-content: space-between;
     margin: 0 15rpx;
     height: 60rpx;
+    padding-top: 15rpx;
 }
 .iconfont{
     font-size: 50rpx;

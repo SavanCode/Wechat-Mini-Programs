@@ -1,5 +1,4 @@
 <!--miniprogram/pages/recommendSong/recommendSong.wxml-->
-
 <view class="wapper">
 	<!-- 头部  -->
 	<view class="header">
@@ -17,15 +16,15 @@
 		<scroll-view scroll-y class='listScroll'>
 			<view
 			 class="scrollItem"
-			 wx:for="{{recommendList}}"
+			 wx:for="{{songList}}"
 			 wx:key="id"
 			 data-index="{{index}}"
 			 data-song='{{item}}'
-			 bindtap="toSongDetail"
+			 bindtap="toDetail"
 			>
 				<image src="{{item.album.picUrl}}"></image>
 				<view class="musicInfo">
-					<text class="musicName">{{item.name}}</text>
+					<text class="name">{{item.name}}</text>
 					<text class="author">{{item.artists[0].name}}</text>
 				</view>
 				<text class="iconfont icon-gengduo"></text>

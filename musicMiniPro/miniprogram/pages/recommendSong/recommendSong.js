@@ -1,20 +1,43 @@
 // miniprogram/pages/recommendSong/recommendSong.js
+import {request} from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+    songList:[]
+  }, 
   onLoad: function (options) {
-
+    let userInfo = wx.getStorageSync('userInfo');
+    if(!userInfo){
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        success: () => {
+          // 跳转至登录界面
+          wx.reLaunch({
+            url: '/pages/login/login'
+          })
+        }
+      })
+    }
+      this.getSongList();
   },
-
+  getSongList: async function(){
+      let result = await request('/recommend/songs') 
+      this.setData({
+        songList:result.recommend
+      })
+  },
+  toDetail:function(e){
+    let song=e.currentTarget.dataset.song;
+    wx.navigateTo({
+      //url: '../song/song?music='+JSON.ssong.idtringify(song),
+      //但是因为接口给了可以直接用id的
+      url: '../song/song?songId='+song.id,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
