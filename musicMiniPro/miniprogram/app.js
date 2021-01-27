@@ -12,8 +12,7 @@ App({
         // env: 'my-env-id',
         traceUser: true,
       })
-    }
-
-    this.globalData = {}
+    } 
+    this.globalData = {musicOn:false,musicId:0,songList:[]}
   }
 })

@@ -1,5 +1,6 @@
 // miniprogram/pages/recommendSong/recommendSong.js
 import {request} from '../../utils/util'
+const appInstance = getApp();
 Page({
 
   /**
@@ -29,6 +30,7 @@ Page({
       this.setData({
         songList:result.recommend
       })
+      appInstance.globalData.songList=result.recommend
   },
   toDetail:function(e){
     let song=e.currentTarget.dataset.song;

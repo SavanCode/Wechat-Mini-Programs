@@ -10,7 +10,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: async function (options) {
+  onLoad: async function () {
       let bannerList= await request('/banner',{type:2});
       //console.log("结果",result.banners)
       this.setData({
@@ -33,7 +33,11 @@ Page({
         })}
         //console.log("result",result)
   },
-
+  goRecommend:function(){
+    wx.navigateTo({
+      url: '../recommendSong/recommendSong',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

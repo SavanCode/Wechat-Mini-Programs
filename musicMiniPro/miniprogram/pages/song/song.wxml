@@ -12,16 +12,16 @@
 		<image class="musicImg" src="{{songContent.al.picUrl}}"></image>
 	</view>
 	<view class="progress">
-		<text class="timeNum">{{currentTime}}11.22</text>
+		<text class="timeNum">{{currentTime}}</text>
 		<view class="barControl">
 			<view class="audio-Time-Bar" style="width: {{currentWidth + 'rpx'}}">
 				<view class="audio-circle"></view>
 			</view>
 		</view>
-		<text class="timeNum">{{durationTime}}11.22</text>
+		<text class="timeNum">{{durationTime}}</text>
 	</view>
 	<view class="controlBar">
-		<view class="iconfont icon-houtui"></view>
+		<view class="iconfont icon-houtui" bindtap="pre"></view>
 		<view
 		 wx:if="{{playing}}"
 		 class="iconfont icon-play"
@@ -32,7 +32,7 @@
 		 class="iconfont icon-play-01"
 		 bindtap="controlMusic"
 		></view>
-		<view class="iconfont icon-qianjinxiayige"></view>
+		<view class="iconfont icon-qianjinxiayige" bindtap="next"></view>
 	</view>
 </view>
 

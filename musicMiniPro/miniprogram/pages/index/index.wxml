@@ -23,6 +23,7 @@
 	 class="navItem"
 	 hover-class="none"
 	 hover-stop-propagation="false"
+	 bindtap="goRecommend"
 	>
 		<view class="iconfont icon-biaoqiankuozhan_tuijian-121"></view>
 		<text>歌曲推荐</text>
