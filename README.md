@@ -18,5 +18,11 @@
 ## miniprogram-4
 npm练习 datepicker 
 
+## miniprogram-5
+新闻展示小程序 - 云数据库
+
+## musicMiniPro
+仿网易云小程序
+
 ## wepyProject
 wepy模板练习 ing
