@@ -36,7 +36,8 @@ page,.wapper{
     height: 70rpx;
     border-radius: 50%;
     background: #fff; 
-    margin: auto;
+    /* margin: auto; */
+    margin-left: 100rpx;
 }
 .needle {
     position: relative;

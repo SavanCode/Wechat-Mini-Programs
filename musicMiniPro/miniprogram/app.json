@@ -1,11 +1,16 @@
 {
-  "pages": [ 
+  "pages": [
     "pages/index/index",
     "pages/user/user",
     "pages/login/login",
-    "pages/video/video","pages/song/song","pages/recommendSong/recommendSong"
+    "pages/video/video",
+    "pages/song/song",
+    "pages/recommendSong/recommendSong",
+    "pages/search/search"
   ],
-  "requiredBackgroundModes":["audio"],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",

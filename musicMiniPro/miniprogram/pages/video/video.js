@@ -7,11 +7,7 @@ Page({
     videoList:[],
     choseVideo:0,
     isRefresh:false
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  }, 
   onLoad: async function (options) { 
     this.getNavItem();
   },
@@ -135,6 +131,11 @@ Page({
         videoList:videoList
       })  
     } 
+  },
+  toSearch:function(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

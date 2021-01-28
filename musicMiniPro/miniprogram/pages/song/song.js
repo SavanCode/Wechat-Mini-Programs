@@ -5,7 +5,7 @@ import {formatDuring} from "../../utils/time";
 var appInstance = getApp();
 Page({ 
   data: {
-    currentWidth:30,
+    currentWidth:0,
     playing:false,
     songContent:[],
     songUrl:'',
@@ -26,7 +26,7 @@ Page({
       })
     }
    
-    // 监视音乐播放/暂停/停止
+    // 监视全局音乐播放/暂停/停止
     this.backgroundAudioManager.onPlay(() => {
       this.changePlayState(true);
       // 修改全局音乐播放的状态
@@ -38,6 +38,37 @@ Page({
     this.backgroundAudioManager.onStop(() => {
       this.changePlayState(false);
     });
+       // 监听音乐实时播放的进度
+       this.backgroundAudioManager.onTimeUpdate(() => {
+        // console.log('总时长: ', this.backgroundAudioManager.duration);
+        // console.log('实时的时长: ', this.backgroundAudioManager.currentTime); // 格式化实时的播放时间
+        let {minutes , seconds }=formatDuring(this.backgroundAudioManager.currentTime  * 1000)
+        //console.log(minutes,seconds)  
+        minutes=parseInt(minutes)
+        seconds=parseInt(seconds)
+        if(minutes<10){
+          minutes="0"+minutes
+        }
+        if(seconds<10){
+          seconds="0"+seconds
+        } 
+        let currentTime = minutes + ":"+ seconds
+        let currentWidth = this.backgroundAudioManager.currentTime/this.backgroundAudioManager.duration * 450;
+        //console.log(currentTime,currentWidth)
+        this.setData({
+          currentTime,
+          currentWidth
+        })
+      })
+
+      // 监听音乐播放自然结束
+    this.backgroundAudioManager.onEnded(() => { 
+      this.next();
+      this.setData({
+        currentWidth: 0,
+        currentTime: '00:00'
+      })
+    }); 
   }, 
   changePlayState(state){
     // 修改音乐是否的状态
@@ -51,18 +82,24 @@ Page({
     this.setData({
       songUrl:result.data[0].url
     })
-    console.log("setting url",this.data)
-  }
-  , 
+  }, 
   getSongContent: async function(id){
     let result= await request('/song/detail',{ids:id})
     console.log("song content",result.songs[0])
     let dt= result.songs[0].dt;
     let {minutes , seconds }=formatDuring(dt)
     //console.log(parseInt(minutes),parseInt(seconds)) 
+    minutes=parseInt(minutes)
+    seconds=parseInt(seconds)
+    if(minutes<10){
+      minutes="0"+minutes
+    }
+    if(seconds<10){
+      seconds="0"+seconds
+    } 
     this.setData({
        songContent:result.songs[0],
-       durationTime:"0"+parseInt(minutes)+":"+parseInt(seconds)
+       durationTime:minutes + ":"+ seconds
     }) 
     wx.setNavigationBarTitle({
       title: this.data.songContent.name+"   "+this.data.songContent.ar[0].name
@@ -76,7 +113,7 @@ Page({
   },
   //这里换成全局判断是为了系统控制不会冲撞
   playMusic(){
-    console.log(this.data.songUrl)
+    console.log("playing")
     let {songUrl,songContent}= this.data
     if(this.data.playing){
       this.backgroundAudioManager.src = songUrl;
@@ -92,6 +129,7 @@ Page({
       wx.showToast({
         title: '前面没有歌曲了',
       })
+      return
     }
     let preId=appInstance.globalData.songList[currentIndex-1].id
     wx.redirectTo({
@@ -104,6 +142,7 @@ Page({
       wx.showToast({
         title: '后面没有歌曲了',
       })
+      return
     }
    let nextId=appInstance.globalData.songList[currentIndex+1].id
     wx.redirectTo({

@@ -15,7 +15,7 @@
 		<text class="timeNum">{{currentTime}}</text>
 		<view class="barControl">
 			<view class="audio-Time-Bar" style="width: {{currentWidth + 'rpx'}}">
-				<view class="audio-circle"></view>
+				<view class="audio-circle" style="margin-left: {{currentWidth + 'rpx'}}"></view>
 			</view>
 		</view>
 		<text class="timeNum">{{durationTime}}</text>

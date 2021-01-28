@@ -7,7 +7,7 @@
 	<view class="topL iconfont icon-shipin">
 
 	</view>
-	<view class="search">
+	<view class="search" bindtap="toSearch">
 		搜索音乐
 	</view>
 	<view class="topR iconfont icon-yinle">

@@ -1,6 +1,6 @@
 /**
  * function: 60秒内（刚刚），60秒至60分钟（**分钟前），1小时至24小时（**小时前），1天至15天（**天前），其他为正常日期显示
- * @number   時間戳
+ * number   時間戳
  */
 
 function formatMsgTime(number) {
@@ -88,6 +88,7 @@ function formatDuring(mss) {
   var hours = (mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
   var minutes = (mss % (1000 * 60 * 60)) / (1000 * 60);
   var seconds = (mss % (1000 * 60)) / 1000;
+  //parseInt()
   return { days:days,hours:hours,minutes:minutes,
     seconds:seconds};
 }
