@@ -43,7 +43,7 @@ Page({
         }
       }) 
     } 
-    console.log("更新video列表",result)
+    // console.log("更新video列表",result)
     if(result.datas.length===0){
       wx.showToast({
         title: '暂无推荐的视频~',

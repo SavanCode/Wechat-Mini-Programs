@@ -21,7 +21,6 @@ Page({
 
   onLoad: function (options) { 
   }, 
-  // 拿数据
   handleInput:function(event){
      //let type = event.currentTarget.id;// id传值 取值： phone || password
     //console.log(event.currentTarget);

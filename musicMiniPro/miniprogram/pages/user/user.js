@@ -7,8 +7,7 @@ Page({
   data: {
     // 拉动事件
     coverTransform: 'translateY(0)',
-    coveTransition: '',
-    //获得用户数据
+    coveTransition: '', 
     userInfo: {},  
     recentPlayList: [], 
   }, 

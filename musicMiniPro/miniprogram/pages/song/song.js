@@ -20,7 +20,6 @@ Page({
 
     // 判断当前页面音乐是否在播放
     if(appInstance.globalData.musicOn && appInstance.globalData.musicId === songId){
-      // 修改当前页面音乐播放状态为true
       this.setData({
         playing: true
       })
@@ -29,7 +28,6 @@ Page({
     // 监视全局音乐播放/暂停/停止
     this.backgroundAudioManager.onPlay(() => {
       this.changePlayState(true);
-      // 修改全局音乐播放的状态
       appInstance.globalData.musicId = songId;
     });
     this.backgroundAudioManager.onPause(() => {
@@ -71,7 +69,6 @@ Page({
     }); 
   }, 
   changePlayState(state){
-    // 修改音乐是否的状态
     this.setData({
       playing:state
     })
